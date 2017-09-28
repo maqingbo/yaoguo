@@ -15,6 +15,7 @@ main .nav-pills {
 }
 main .nav-pills > li {
   margin-bottom: 7px;
+  -webkit-box-shadow: 0 0 5px #d5d5d5;
   box-shadow: 0 0 5px #d5d5d5;
   background-color: #fff;
   border-radius: 0;
@@ -189,6 +190,7 @@ main #public .section-content .jcarousellite .jcarousellite-wrap ul li.gkk-item 
   color: #fff;
   text-align: center;
   line-height: 26px;
+  -webkit-box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
   box-shadow: 2px 4px 12px rgba(0, 0, 0, 0.3);
 }
 main #public .section-content .jcarousellite .jcarousellite-wrap ul li.gkk-item > a > span.jiangyi {
@@ -259,6 +261,7 @@ main .goods-wrap .section-content .pro .pro-item > a {
   height: 100%;
   border: 1px solid #ccc;
   color: #333333;
+  -webkit-box-shadow: 0 0 10px #d7d7d7;
   box-shadow: 0 0 10px #d7d7d7;
   border-radius: 4px;
 }
@@ -355,6 +358,7 @@ main .goods-wrap .section-content .pro .pro-item > a .pro-item-hover span {
   background-color: #ff5252;
   color: #fff;
   font-size: 24px;
+  -webkit-box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.3);
   box-shadow: 2px 2px 12px 0 rgba(0, 0, 0, 0.3);
 }
 main #znlx .section-content {
@@ -443,6 +447,7 @@ main #znlx .section-content .tab-content .row .col-md-2:nth-child(6) .znlx-item 
 main #znlx .section-content .tab-content .znlx-item {
   margin: 20px 0;
   border: 1px solid #ccc;
+  -webkit-box-shadow: 0 0 10px #d7d7d7;
   box-shadow: 0 0 10px #d7d7d7;
   border-radius: 4px;
 }
