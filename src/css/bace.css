@@ -41,6 +41,7 @@ body {
 .navbar-yaoguo {
   border: none;
   background-color: #fff;
+  -webkit-box-shadow: 0 3px 8px #d5d5d5;
   box-shadow: 0 3px 8px #d5d5d5
 }
 
@@ -140,6 +141,7 @@ body {
   }
   .navbar-yaoguo {
     border-bottom: 1px solid #4e96f5;
+    -webkit-box-shadow: 0 0 0;
     box-shadow: 0 0 0
   }
   .navbar-yaoguo .navbar-nav .open .dropdown-menu>li>a {
@@ -191,13 +193,7 @@ body {
   z-index: 30;
   width: 40px;
   height: 40px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
   border-radius: 5px;
-  -moz-background-clip: padding;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box
 }
 

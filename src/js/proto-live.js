@@ -50,7 +50,7 @@ Live.prototype = {
     var str = '';
 
     str += '<div class="col-md-3 col-sm-4 col-xs-12 item pro-item">';
-    str += '  <a href="#">';
+    str += '  <a href="./class.html">';
     str += '    <div class="pro-item-img hidden-xs">';
     str += '      <img src="' + this.img[0].src + '" alt="'+ this.name +'">';
     str += '    </div>';
