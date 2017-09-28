@@ -1,0 +1,12 @@
+// 引用到原有的bootstrap文件
+@import "../bootstrap/less/bootstrap.less";
+
+// 引用我们自己定义的变量和组件
+@import "custom-variables.less";
+@import "custom-mixins.less";
+@import "custom-components.less";
+@import "shadows.less";
+// @import "../font-awesome/less/font-awesome.less";
+
+// 同样要引用原生的utilities.less，要保证该文件始终最后一个被导入
+@import "../bootstrap/less/utilities.less";

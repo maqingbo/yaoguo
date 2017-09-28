@@ -1,0 +1,247 @@
+@import "../custom-bootstrap/custom-variables.less";
+@import "../custom-bootstrap/shadows.less";
+
+// 公共样式修改==================================================================
+
+// Links
+a {
+  color: @link-color;
+  text-decoration: none;
+  transition: all .4s ease;
+
+  &:hover,
+  &:focus {
+    color: @link-hover-color;
+    text-decoration: none;
+  }
+
+  &:focus {
+    .tab-focus();
+  }
+}
+
+// 省略号
+.text-overflow {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+// 滚动条样式 ==================================================================
+::-webkit-scrollbar {
+width: 6px;
+}
+::-webkit-scrollbar-track {
+	  background-color: transparent;
+} /* 滚动条的滑轨 */
+
+::-webkit-scrollbar-thumb {
+	  background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+} /* 滑块 */
+
+::-webkit-scrollbar-button {
+	  // background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+} /* 滑轨两头的监听按钮 */
+
+::-webkit-scrollbar-corner {
+	  background-color: transparent;
+} /* 横向滚动条和纵向滚动条相交处尖角 */
+
+// 组件==================================================================
+header {
+  .navbar {
+    border-top: 6px solid @blue-400;
+    // border-bottom: 0;
+    .shadow-yaoguo();
+    margin-bottom: 0;
+    transform: translateZ(0);
+
+    .navbar-header {
+      .navbar-brand {
+        padding: 0;
+        margin-right: 60px;
+
+        > img {
+          max-height: 40px;
+          margin-top: 5px;
+        }
+      }
+    }
+
+    .navbar-collapse {
+      .input-group {
+        .input-group-addon,
+        input {
+          border-top: 2px solid darken(@brand-primary,10%);
+          border-bottom: 2px solid darken(@brand-primary,10%);
+          border-left: 0;
+          border-right: 0;
+
+          &:focus {
+            box-shadow: none;
+          }
+        }
+
+        .input-group-addon:first-child {
+          background-color: #fff;
+          border-left: 2px solid darken(@brand-primary,10%);
+          border-right: 0;
+
+          .fa {
+            color: darken(@brand-primary,10%);
+          }
+        }
+
+        .input-group-addon:last-child {
+          color: #fff;
+          background-color: darken(@brand-primary,10%);
+          border-right: 2px solid darken(@brand-primary,10%);
+          cursor: pointer;
+        }
+      }
+
+      // .navbar-nav > li > a:hover {
+      //   background: url("../imgs/nav_a_bg.png") no-repeat 0 0;
+      // }
+      .navbar-nav > li::after {
+        content: "";
+        width: 1px;
+        height: 10px;
+        background: #dcdcdc;
+        position: absolute;
+        top: 20px;
+      }
+      .navbar-nav > li:first-child:after {
+        display: none;
+      }
+    }
+
+
+  }
+}
+
+
+footer {
+  color: #fff;
+  background: @brand-primary url('../imgs/nav_bg.png') repeat-y bottom ;
+  background-size: 100% 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .fa {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    margin-right: 10px;
+  }
+
+  p,a {
+    margin: 5px 0;
+  }
+
+  a {
+    display: block;
+    color: #fff;
+    &:hover,&:active,&:focus {
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+}
+
+// 返回顶部
+.to-top {
+  // width: 50px;
+  height: auto;
+  position: fixed;
+  z-index: 1020;
+  right: 10px;
+  bottom: 30px;
+  border-radius: @border-radius-base;
+  transform: translateZ(0);
+  box-shadow: 0 0 8px rgba(0,0,0,.5);
+
+  > a {
+    display: block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    font-size: 16px;
+    color: darken(@brand-primary,10%);
+
+    &:first-child {
+      border-top-left-radius: @border-radius-base;
+      border-top-right-radius: @border-radius-base;
+    }
+    &:last-child {
+      border-bottom-left-radius: @border-radius-base;
+      border-bottom-right-radius: @border-radius-base;
+      border-bottom: 0;
+    }
+    &:hover {
+      color: #fff;
+      background-color: darken(@brand-primary,10%);
+    }
+    &.fa-comments > div {
+      top: 0;
+      margin-top: 0;
+      padding-left: 10px;
+    }
+
+    > div {
+      position: absolute;
+      z-index: 10000;
+      top: 50%;
+      margin-top: -52px;
+      left: 0;
+      visibility: hidden;
+      opacity: 0;
+      transition: visibility 0s, opacity 0.5s linear;
+
+      width: 240px;
+      height: auto;
+      padding: 10px;
+      // padding-left: 104px;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: @border-radius-base;
+      box-shadow: 0 0 8px rgba(0,0,0,.5);
+      font-size: 14px;
+      color: @gray-dark;
+      line-height: 1.4;
+      text-align: left;
+
+      img {
+        float: left;
+        margin-right: 10px;
+      }
+
+    }
+
+    &:hover > div {
+      visibility: visible;
+      opacity: 1;
+      left: -250px;
+    }
+
+  }
+}
+
+// 板块标题==================================================================
+.section-title {
+  height: 40px;
+  line-height: 40px;
+  margin: 40px;
+
+  .section-title-line {
+    background-color: #ccc;
+  }
+}
